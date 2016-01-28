@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="EducationEdge">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +14,11 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+   <script src="angular.min.js"></script>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+   <script type="text/javascript" src="root.js"> </script>
+   <script type="text/javascript" src="mentors.js"> </script>
+   
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,8 +49,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="https://mickymots.github.io/">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="https://mickymots.github.io/">Home</a></li>
+                <li class="active"><a href="#about" ng-click="headerPanel.selectTab(0)">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -84,62 +83,16 @@
 
    
       <!-- Three columns of text below the carousel -->
-      <div class="row">
 
-
-        <div class="col-lg-4 ">
-          <img class="img-circle" src="16878330.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Amit Singh</h2>
-          <p>Blah Blah about yourself....</p>
-          <p><a class="btn btn-default" href="#" role="button">link to profile page &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+	<mentor-header> 	</mentor-header>
+    
+	<mentor-detail> </mentor-detail>
+	
+	<education-edge> </education-edge>
 
 
 
-         <div class="col-lg-4">
-          <img class="img-circle" src="16878331.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Donald Duck</h2>
-          <p>Blah Blah about yourself....</p>
-          <p><a class="btn btn-default" href="#" role="button">link to profile page &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-
-
-
-         <div class="col-lg-4">
-          <img class="img-circle" src="16878332.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Micky Mouse</h2>
-          <p>Blah Blah about yourself....</p>
-          <p><a class="btn btn-default" href="#" role="button">link to profile page &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-
-      </div><!-- /.row -->
-
-     <div class="row ">
- 
-		<h2 class="featurette-heading">About Education Edge</h2>
-	<p class="lead">The systematic provision of learning techniques to most children, such as literacy, has been a development of the 
-		last 150 or 200 years [1][citation needed], or even last 50 years in some countries. 
-		Schools for the young have historically been supplemented with advanced training for priests, bureaucrats and specialists.
-      	</p>
-
-<p> In ancient India, during the Vedic period from about 1500 BC to 600 BC, most education was based on the Veda (hymns, formulas, and incantations, recited or chanted by priests of a pre-Hindu tradition) and later Hindu texts and scriptures.
-
-Vedic education included: proper pronunciation and recitation of the Veda, the rules of sacrifice, grammar and derivation, composition, versification and meter, understanding of secrets of nature, reasoning including logic, the sciences, and the skills necessary for an occupation.[16] Some medical knowledge existed and was taught. There is mention in the Veda of herbal medicines for various conditions or diseases, including fever, cough, baldness, snake bite and others.[16]
-
-Education, at first freely available in Vedic society, became over time more discriminatory as the caste system, originally based on occupation, evolved, with the brahman (priests) being the most privileged of the castes.[16]
-
-The oldest of the Upanishads - another part of Hindu scriptures - date from around 500 BC. These texts encouraged an exploratory learning process where teachers and students were co-travellers in a search for truth. The teaching methods used reasoning and questioning. Nothing was labeled as the final answer.[16]
-
-The Gurukul system of education supported traditional Hindu residential schools of learning; typically the teacher's house or a monastery. Education was free, but students from well-to-do families paid "Gurudakshina," a voluntary contribution after the completion of their studies. At the Gurukuls, the teacher imparted knowledge of Religion, Scriptures, Philosophy, Literature, Warfare, Statecraft, Medicine, Astrology and History.[citation needed] The corpus of Sanskrit literature encompasses a rich tradition of poetry and drama as well as technical scientific, philosophical and generally Hindu religious texts, though many central texts of Buddhism and Jainism have also been composed in Sanskrit.
-
-Two epic poems formed part of ancient Indian education. The Mahabharata, part of which may date back to the 8th century BC,[17] discusses human goals (purpose, pleasure, duty, and liberation), attempting to explain the relationship of the individual to society and the world (the nature of the 'Self') and the workings of karma. The other epic poem, Ramayana, is shorter, although it has 24,000 verses. It is thought to have been compiled between about 400 BC and 200 AD. The epic explores themes of human existence and the concept of dharma.[17]
-
-An early center of learning in India dating back to the 5th century BC was Taxila (also known as Takshashila), which taught the three Vedas and the eighteen accomplishments.[18] It was an important Vedic/Hindu[19] and Buddhist[20] centre of learning from the 6th century BC[21] to the 5th century AD.[22][23]'</p>
-
-      </div><!-- /.row -->
-
-
-<hr class="featurette-divider">
+       <hr class="featurette-divider">
   
 
       <!-- FOOTER -->
