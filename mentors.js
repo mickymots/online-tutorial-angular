@@ -14,25 +14,25 @@ app.directive('mentorHeader', function(){
     	store.pickups = [ {
 						"name" : "Amit Singh",
 	
-						"description": "Ideal for carrying small household stuffs",
+						"description": "Developer @ Education Edge",
 	
-						"images": [{ "full" : "ace_full.jpg" , "thumbnail" : "16878330.jpg"}],
+						"image":  "16878330.jpg",
 	
 	
 						},{
 						"name" : "Donald Duck",
 						
-						"description": "Ideal for carrying medium household stuffs",
+						"description": "Developer @ Education Edge",
 						
-						"images": [{ "full" : "ace_full.jpg" , "thumbnail" : "16878331.jpg"}],
+						"image":  "16878331.jpg" ,
 						
 						
 						},{
 						"name" : "Micky Mouse",
 						
-						"description": "Ideal for carrying large household stuffs",
+						"description": "Developer @ Education Edge",
 						
-						"images": [{ "full" : "ace_full.jpg" , "thumbnail" : "16878332.jpg"}],
+						"image": "16878332.jpg",
 						
 						
 						}];
