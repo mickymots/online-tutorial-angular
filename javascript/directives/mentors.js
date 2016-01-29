@@ -7,7 +7,7 @@ var app = angular.module('aboutUsModule',[]);
 app.directive('mentorHeader', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'mentorHeader.html',
+		templateUrl: 'templates/mentorHeader.html',
 		controller: function(){
 
 		var store = this;
@@ -54,17 +54,10 @@ app.directive('mentorHeader', function(){
 app.directive('mentorDetail', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'mentorDetail.html',
+		templateUrl: 'templates/mentorDetail.html',
 	};
 });
 
-//app.directive('educationEdge', function(){
-	//return {
-	//	restrict: 'E',
-	//	templateUrl: 'education-edge.html',
-		
-	//};
-//});
 
 
 })();
