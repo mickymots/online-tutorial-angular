@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="courseModule">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="resources/images/favicon.ico">
+
+    <title>Education Edge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <script src="javascript/angular.min.js"></script>
+  <script src="javascript/angular-route.min.js"></script>
+   
+   <script type="text/javascript" src="javascript/course-app.js"> </script>
+   <script type="text/javascript" src="javascript/directives/footer.js"> </script>
+   <script type="text/javascript" src="javascript/directives/navbar.js"> </script>
+   <script type="text/javascript" src="javascript/directives/courseHeader.js"> </script>
+   <script type="text/javascript" src="javascript/directives/courseDetail.js"> </script>
+    <script type="text/javascript" src="javascript/controllers/CourseController.js"> </script>
+   
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link href="resources/css/carousel.css" rel="stylesheet">
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  
+ 
+   <div ng-controller="navController">
+		<navbar-tag info="home"> </navbar-tag>
+    </div>
+	
+	
+    <div class="container"> 
+   
+   
+		<div class="course-wrapper">
+		
+		  <!-- Course Header Section Loaded below -->
+		  
+		  <course-header> </course-header>
+		  
+		  
+		  <!-- Course Detail Section Loaded below -->
+		  
+		  <div ng-view></div>
+		  
+		 
+		
+		</div>
+	<!-- FOOTER -->
+    <footer-tag> </footer-tag>
+	</div>
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascript/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+   
+   
+  </body>
+</html>

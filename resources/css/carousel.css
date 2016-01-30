@@ -8,6 +8,66 @@ body {
 }
 
 
+
+
+/* CUSTOMIZE THE COURSE WINDOW
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.course-wrapper {
+  
+  position: relative;
+  margin-top: 75px;  
+  border-color:grey;
+  border: thin;
+  border-style: dotted;
+  height: auto;
+    
+}
+
+.course-header  {
+  padding-top: 0px;
+  border-color:grey;
+  border: thin;
+  border-style: solid;
+  height: 50px;
+    
+}
+
+.course-detail  {
+  margin: 0px;
+  border-color:grey;
+  border: thin;
+  border-style: solid;
+  
+    
+}
+
+.module-panel{
+	
+border-color:grey;
+  border: thin;
+  border-style: solid;
+  height:100%;
+}
+
+
+.page-panel{
+	
+	border-color:grey;
+  border: thin;
+  border-style: solid;
+  height:100%;
+  min-height:500px;
+}
+
+.course-wrapper > .row{
+	
+	padding:15px;
+}
+
+
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
