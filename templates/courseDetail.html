@@ -1,18 +1,19 @@
-<div>
-	<div class="row course-detail" id="java-course-intro" ng-controller="CourseCtrl">
+<div ng-controller="CourseCtrl as course">
+	<div class="row course-detail" id="java-course-intro"  ng-controller="moduleCtrl as moduler" >
         <div class="col-md-3 module-panel" >
          		 
-			 <div> {{course.courseName}} </div>
+			 <div> {{course.course.courseName}} {{course.pageHeader}}</div>
 			 <ul class="modules">
-					<li ng-repeat="module in course.modules" class="thumbnail">
+			 
+					<li ng-repeat="module in course.course.modules" class="thumbnail">
 						
-						<div ng-controller="moduleCtrl">
-							<a href="#/courseDetail" class="thumb" ng-click="loadModule(module.id,module.moduleName)"> {{module.moduleName}}	</a>
+						<div>
+							<a href="#/courseDetail" class="thumb" ng-click="moduler.loadModule(module.id, module.moduleName, course.pageHeader)"> {{module.moduleName}}	</a>
 							
 							<ul>
 							
-								<li ng-repeat="page in pages">
-									<a href="#/courseDetail" class="thumb" ng-click="setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
+								<li ng-repeat="page in moduler.pages">
+									<a href="#/courseDetail" class="thumb" ng-click="moduler.setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
 								</li>
 							</ul>
 							
@@ -22,11 +23,11 @@
 		  		  
 	   </div>
 	   
-        <div ng-controller="pageCtrl">
+        <div >
 		
-			<p> {{pageHeader}}</p>
+			<p> {{moduler.pageHeader}}</p>
 
-			<p> {{page}} <p>
+			<p> {{course.page}} <p>
         </div>
 		
     </div>

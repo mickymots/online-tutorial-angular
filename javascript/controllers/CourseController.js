@@ -3,21 +3,28 @@
 var courseController = angular.module('courseController', []);
 
 
-	courseController.controller('moduleCtrl', ['$scope', '$http', '$log', function($scope,$http,$log){
+	courseController.controller('moduleCtrl', [ '$http', '$log', function($http,$log){
 		
-		$scope.pages = {};
+		var module = this;
+		module.pages = {};
+		module.page = "";
+		module.pageHeader="XXXXX";
 		
-		$scope.loadModule = function(moduleId, moduleName){
+		module.loadModule = function(moduleId, moduleName, pageHeader){
 		   
-			pageHeader = moduleId;
+			module.pageHeader = moduleName;
 			
-			$log.info("calling load module"+ $scope.pageHeader);
-			//$rootScope.pageHeader ="...";
+			//$log.info("calling load module ->: "+ moduleId + " : "+ moduleName +":"+ pageHeader);
+			
 			$http.get('resources/data/'+moduleId+'.json').success(function(data) {
-				$scope.pages = data.pages;
-				$scope.page = data.data;
+				
+				$log.info(data.pages);
+				module.pages = data.pages;
+				module.page = data.data;
 				
 			});
+			
+			
 		};
 	}]);
 	
@@ -38,16 +45,14 @@ var courseController = angular.module('courseController', []);
 	}]);
 	
   
-  courseController.controller('CourseCtrl', ['$scope', '$http', '$log',
+courseController.controller('CourseCtrl', ['$http', '$log',
   
   function($scope, $http, $log) {
-	$scope.pageHeader = 'Module Information';
-	$scope.page="Content Loading...";
-    //$scope.pages = {};
-	
-	$scope.course = {"courseName":"Core Java", "modules": [{"id":1,"moduleName":"Module 1"},{"id":2,"moduleName":"Module 2"}, {"id":3,"moduleName":"Module 3"}, {"id":4,"moduleName":"Module 4"}]};
+
+    
+	this.course = {"courseName":"Core Java", "modules": [{"id":1,"moduleName":"Module 1"},{"id":2,"moduleName":"Module 2"}, {"id":3,"moduleName":"Module 3"}, {"id":4,"moduleName":"Module 4"}]};
   
   
-  }]);
+}]);
   
  
