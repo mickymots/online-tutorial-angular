@@ -18,7 +18,7 @@ var courseController = angular.module('courseController', []);
 		
 		$log.info("calling xhr");
 		$http.get('resources/data/'+moduleId+'.json').success(function(data) {
-			$scope.page = data;
+			$scope.page = data.data;
 			
 		});
 		
