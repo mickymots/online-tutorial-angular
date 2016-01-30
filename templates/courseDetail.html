@@ -1,24 +1,28 @@
 <div>
-	<div class="row course-detail" id="java-course-intro">
-        <div class="col-md-3 module-panel">
+	<div class="row course-detail" id="java-course-intro" ng-controller="CourseCtrl">
+        <div class="col-md-3 module-panel" >
          		 
-		 <div> {{course.courseName}} </div>
-		 <ul class="modules">
-				<li ng-repeat="module in course.modules" class="thumbnail">
-					<a href="#/courseDetail" class="thumb" ng-click="setModule(module.id,module.moduleName)"> {{module.moduleName}}	</a>
-					
-					<ul>
-					
-						<li ng-repeat="page in pages">
-							<a href="#/courseDetail" class="thumb" ng-click="setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
-						</li>
-					</ul>
-				</li>
-		 </ul>
+			 <div> {{course.courseName}} </div>
+			 <ul class="modules">
+					<li ng-repeat="module in course.modules" class="thumbnail">
+						
+						<div ng-controller="moduleCtrl">
+							<a href="#/courseDetail" class="thumb" ng-click="loadModule(module.id,module.moduleName)"> {{module.moduleName}}	</a>
+							
+							<ul>
+							
+								<li ng-repeat="page in pages">
+									<a href="#/courseDetail" class="thumb" ng-click="setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
+								</li>
+							</ul>
+							
+						</div>
+					</li>
+			 </ul>
 		  		  
 	   </div>
 	   
-        <div id="page">
+        <div ng-controller="pageCtrl">
 		
 			<p> {{pageHeader}}</p>
 

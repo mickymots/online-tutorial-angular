@@ -3,8 +3,8 @@
 var app = angular.module('navbarModule',[]);
 
 app.controller('navController', ['$scope', function($scope) {
-  $scope.home = { name: 'home', address: '1600 Amphitheatre' };
-  $scope.about = { name: 'about', address: '123 Somewhere' };
+  $scope.home = { name: 'home' };
+  $scope.about = { name: 'about'};
   
   
 }]);
