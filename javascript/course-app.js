@@ -8,7 +8,7 @@ var app = angular.module('courseModule',['ngRoute','courseController','courseHea
 		
 		$routeProvider.when('/',{templateUrl:'templates/contentPanel.html'})
 		.when('/courseDetail',{templateUrl:'templates/courseDetailPane.html', controller: 'CourseCtrl'})
-		.when('/courseDetail/module',{templateUrl:'templates/moduleDetailPane.html', controller: 'ModuleCtrl'})
+		
 		.otherwise({redirectTo:'/'});
 	}]);
 
