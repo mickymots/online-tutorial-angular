@@ -6,6 +6,13 @@
 		 <ul class="modules">
 				<li ng-repeat="module in course.modules" class="thumbnail">
 					<a href="#/courseDetail" class="thumb" ng-click="setModule(module.id,module.moduleName)"> {{module.moduleName}}	</a>
+					
+					<ul>
+					
+						<li ng-repeat="page in pages">
+							<a href="#/courseDetail" class="thumb" ng-click="setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
+						</li>
+					</ul>
 				</li>
 		 </ul>
 		  		  
