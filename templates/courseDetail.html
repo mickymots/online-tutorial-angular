@@ -1,23 +1,16 @@
 <div ng-controller="CourseCtrl as course">
-	<div class="row course-detail" id="java-course-intro"  ng-controller="moduleCtrl as moduler" >
-        <div class="col-md-3 module-panel" >
+	<div class="row course-detail" id="java-course-intro"	>
+        
+		
+		<div class="col-md-3 module-panel" >
          		 
 			 <div> {{course.course.courseName}} {{course.pageHeader}}</div>
 			 <ul class="modules">
 			 
 					<li ng-repeat="module in course.course.modules" class="thumbnail">
 						
-						<div>
-							<a href="#/courseDetail" class="thumb" ng-click="moduler.loadModule(module.id, module.moduleName, course.pageHeader)"> {{module.moduleName}}	</a>
-							
-							<ul>
-							
-								<li ng-repeat="page in moduler.pages">
-									<a href="#/courseDetail" class="thumb" ng-click="moduler.setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
-								</li>
-							</ul>
-							
-						</div>
+						<left-navigation> </left-navigation>
+						
 					</li>
 			 </ul>
 		  		  
@@ -25,7 +18,7 @@
 	   
         <div >
 		
-			<p> {{moduler.pageHeader}}</p>
+			<p> {{course.pageHeader}}</p>
 
 			<p> {{course.page}} <p>
         </div>

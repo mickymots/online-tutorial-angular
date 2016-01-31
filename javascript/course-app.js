@@ -1,6 +1,6 @@
 ﻿(function(){
 
-var app = angular.module('courseModule',['ngRoute','courseController','courseHeader','courseDetail','navbarModule','footerModule']);
+var app = angular.module('courseModule',['ngRoute','courseController','leftNavgationModule','courseHeader','courseDetail','navbarModule','footerModule']);
 
 	app.config(['$routeProvider', 
 

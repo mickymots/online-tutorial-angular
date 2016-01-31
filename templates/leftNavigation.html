@@ -1,0 +1,12 @@
+<div ng-controller="moduleCtrl as moduler">
+							
+	<a href="#/courseDetail" class="thumb" ng-click="course.resetModule(); moduler.loadModule(module); course.updatePageHeader(module.moduleName);"> {{module.moduleName}}	</a>
+	
+	<ul>
+	
+		<li ng-repeat="page in module.pages">
+			<a href="#/courseDetail" class="thumb" ng-click="moduler.setPage(page.pageId,page.pageName)"> {{page.pageName}}	</a>
+		</li>
+	</ul>
+	
+</div>
